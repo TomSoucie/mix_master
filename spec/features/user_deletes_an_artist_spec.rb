@@ -14,7 +14,6 @@ RSpec.feature "User deletes an artist" do
     artist = Artist.create(name: "Sturgill", image_path: "http://www.sturgillsimpson.com/sites/g/files/g2000005636/f/201604/about-pic-2.jpg")
 
     visit artist_path(artist)
-    # byebug
     click_on "delete"
 
     expect(page).to have_content("All Artists")

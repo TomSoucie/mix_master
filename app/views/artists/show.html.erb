@@ -1,8 +1,8 @@
 <h1>Individual Artist Page</h1>
 
 <%= @artist.name %>
-<%=image_tag @artist.image_path %>
-<%=link_to "delete", artist_path(@artist), method: :delete,
-data: {confirm: "Really delete this artist? Cannot be undone"} %>
-
+<%= image_tag @artist.image_path %>
 <%= link_to "Edit Artist", edit_artist_path(@artist) %>
+<%= link_to "delete", artist_path(@artist), method: :delete,
+data: {confirm: "Really delete this artist? Cannot be undone"} %>
+<%= link_to "New song", new_artist_song_path(@artist) %>
